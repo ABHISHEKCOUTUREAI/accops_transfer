@@ -1,0 +1,15 @@
+{
+  "name": "QdrantSinkConnectorConnector_0",
+  "config": {
+    "value.converter.schemas.enable": "false",
+    "name": "QdrantSinkConnectorConnector_0",
+    "connector.class": "io.qdrant.kafka.QdrantSinkConnector",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "topics": "qdrant,qdrant_kafka.docs",
+    "errors.deadletterqueue.topic.name": "dead_queue",
+    "errors.deadletterqueue.topic.replication.factor": "1",
+    "qdrant.grpc.url": "http://qdrant:6334",
+    "qdrant.api.key": "************"
+  }
+}
