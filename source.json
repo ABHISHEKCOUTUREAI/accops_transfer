@@ -1,0 +1,15 @@
+{
+  "name": "MongoSourceConnectorConnector_0",
+  "config": {
+    "connector.class": "com.mongodb.kafka.connect.MongoSourceConnector",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "connection.uri": "mongodb://mongodb:27017/?replicaSet=rs0&directConnection=true",
+    "database": "qdrant_kafka",
+    "collection": "docs",
+    "publish.full.document.only": "true",
+    "topic.namespace.map": "{\"*\":\"qdrant_kafka.docs\"}",
+    "copy.existing": "true"
+  }
+}
+
